@@ -29,7 +29,28 @@ vim.keymap.set('n', '<A-Right>', ':BufferNext<CR>', opts)
 vim.keymap.set('n', '<AS-Left>', ':BufferMovePrevious<CR>', opts)
 vim.keymap.set('n', '<AS-Right>', ':BufferMoveNext<CR>', opts)
 -- Goto buffer in number position
-vim.keymap.set('n', '<>', '', opts)
+vim.keymap.set('n', '<A-1>', ':BufferGoto 1<CR>', opts)
+vim.keymap.set('n', '<A-2>', ':BufferGoto 2<CR>', opts)
+vim.keymap.set('n', '<A-3>', ':BufferGoto 3<CR>', opts)
+vim.keymap.set('n', '<A-4>', ':BufferGoto 4<CR>', opts)
+vim.keymap.set('n', '<A-5>', ':BufferGoto 5<CR>', opts)
+vim.keymap.set('n', '<A-6>', ':BufferGoto 6<CR>', opts)
+vim.keymap.set('n', '<A-7>', ':BufferGoto 7<CR>', opts)
+vim.keymap.set('n', '<A-8>', ':BufferGoto 8<CR>', opts)
+vim.keymap.set('n', '<A-9>', ':BufferGoto 9<CR>', opts)
+vim.keymap.set('n', '<A-0>', ':BufferGoto 0<CR>', opts)
+-- Buffer Pick
+vim.keymap.set('n', '<AS-p>', ':BufferPick<CR>', opts)
+-- Pin/Unpin Buffer
+vim.keymap.set('n', '<A-p>', ':BufferPin<CR>', opts)
+vim.keymap.set('n', '<A-gp>', ':BufferGotoPinned<CR>', opts)
+-- Close Buffer
+vim.keymap.set('n', '<C-w>', ':BufferClose<CR>', opts)
+vim.keymap.set('n', '<C-wbc>', ':BufferCloseAllButCurrent<CR>', opts)
+vim.keymap.set('n', '<C-wbp>', ':BufferCloseAllButPinned<CR>', opts)
+vim.keymap.set('n', '<C-wbpc>', ':BufferCloseAllButCurrentOrPinned<CR>', opts)
+
+
 
 
 -- Resize with arrows
