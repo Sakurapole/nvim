@@ -18,6 +18,20 @@ vim.keymap.set('n', '<C-j>', '<C-w>j', opts)
 vim.keymap.set('n', '<C-k>', '<C-w>k', opts)
 vim.keymap.set('n', '<C-l>', '<C-w>l', opts)
 
+-- NvimTree
+vim.keymap.set('n', '<C-b>', ':NvimTreeToggle<CR>', opts)
+
+-- BarBar
+-- Move to previous/next buffer
+vim.keymap.set('n', '<A-Left>', ':BufferPrevious<CR>', opts)
+vim.keymap.set('n', '<A-Right>', ':BufferNext<CR>', opts)
+-- Re-order to previous/next location
+vim.keymap.set('n', '<AS-Left>', ':BufferMovePrevious<CR>', opts)
+vim.keymap.set('n', '<AS-Right>', ':BufferMoveNext<CR>', opts)
+-- Goto buffer in number position
+vim.keymap.set('n', '<>', '', opts)
+
+
 -- Resize with arrows
 -- delta: 2 lines
 vim.keymap.set('n', '<C-Up>', ':resize -2<CR>', opts)
@@ -33,4 +47,4 @@ vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', opts)
 vim.keymap.set('v', '<', '<gv', opts)
 vim.keymap.set('v', '>', '>gv', opts)
 
-vim.keymap.set('n', '<C-b>', ':NvimTreeToggle<CR>', opts)
+

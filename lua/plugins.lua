@@ -90,6 +90,7 @@ require("lazy").setup({
     end,
     dependencies = { { 'nvim-tree/nvim-web-devicons' } }
   },
+  -- top tabline
   {
     'romgrk/barbar.nvim',
     dependencies = {
@@ -103,11 +104,21 @@ require("lazy").setup({
       -- insert_at_start = true,
       -- …etc.
     },
+    config = function()
+      require("config.barbar")
+    end,
     version = '^1.0.0', -- optional: only update when a new 1.x version is released
   },
   -- Code HighLight
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate"
+  },
+  {
+    "lewis6991/gitsigns.nvim",
+    version = "*",
+    config = function()
+      require('config.gitsigns')
+    end,
   }
 })
