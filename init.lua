@@ -1,0 +1,5 @@
+require('options')
+require('keymap')
+-- require('lua.config.colorscheme')
+require('plugins')
+require('lsp')
