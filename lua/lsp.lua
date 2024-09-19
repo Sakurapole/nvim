@@ -110,10 +110,10 @@ lspconfig.lua_ls.setup({
 
 lspconfig.bashls.setup({})
 
-lspconfig.rust_analyzer.setup({
-  -- source: https://rust-analyzer.github.io/manual.html#nvim-lsp
-  on_attach = on_attach,
-})
+--lspconfig.rust_analyzer.setup({
+---- source: https://rust-analyzer.github.io/manual.html#nvim-lsp
+--  on_attach = on_attach,
+--})
 
 -- Case 1. For CMake User
 --     $ cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON .

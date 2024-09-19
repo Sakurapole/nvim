@@ -1,6 +1,8 @@
+vim.opt.termguicolors = true
+
 -- Hint: use `:h <option>` to figure out the meaning if needed
 vim.opt.clipboard = 'unnamedplus' -- use system clipboard
-vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
+-- vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
 vim.opt.mouse = 'a'               -- allow the mouse to be used in Nvim
 
 -- Tab
@@ -16,7 +18,7 @@ vim.opt.cursorline = true     -- highlight cursor line underneath the cursor hor
 vim.opt.splitbelow = true     -- open new vertical split bottom
 vim.opt.splitright = true     -- open new horizontal splits right
 -- vim.opt.termguicolors = true        -- enabl 24-bit RGB color in the TUI
-vim.opt.showmode = false      -- we are experienced, wo don't need the "-- INSERT --" mode hint
+vim.opt.showmode = true      -- we are experienced, wo don't need the "-- INSERT --" mode hint
 
 -- Searching
 vim.opt.incsearch = true  -- search as characters are entered

@@ -5,11 +5,11 @@ require("barbar").setup {
     clickable = true,
     sidebar_filetypes = {
       NvimTree = true,
-      undotree = {
-        text = 'NvimTree',
-        align = 'right',
-      },
-      ['nvim-tree'] = { event = 'BufWipeout' },
-      Outline = { event = 'BufWinLeave', text = 'symbols-outline', align = 'right' }
+      -- undotree = {
+      --  text = 'NvimTree',
+      --  align = 'right',
+      -- },
+      -- ['nvim-tree'] = { event = 'BufWipeout' },
+      -- Outline = { event = 'BufWinLeave', text = 'symbols-outline', align = 'right' }
     },
 }
