@@ -86,7 +86,9 @@ require("lazy").setup({
   {
     "akinsho/toggleterm.nvim",
     version = "*",
-    config = true,
+    config = function()
+      require('config.toggleterm')
+    end,
   },
   -- Dashboard
   {
