@@ -61,7 +61,7 @@ local on_attach = function(client, bufnr)
   vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename, bufopts)
   vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, bufopts)
   vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
-  vim.keymap.set("n", "<space>f", function()
+  vim.keymap.set("n", "<space>fc", function()
     vim.lsp.buf.format({
       async = true,
       -- Only request null-ls for formatting
@@ -70,6 +70,17 @@ local on_attach = function(client, bufnr)
       end,
     })
   end, bufopts)
+
+
+  vim.api.nvim_create_autocmd("FileType", {
+    pattern = "python",
+    callback = function()
+      vim.opt_local.tabstop = 2
+      vim.opt_local.shiftwidth = 2
+      vim.opt_local.softtabstop = 2
+      vim.opt_local.expandtab = true
+    end,
+  })
 end
 
 -- How to add a LSP for a specific programming language?
