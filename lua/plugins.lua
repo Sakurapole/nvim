@@ -49,6 +49,9 @@ require("lazy").setup({
 	{
 		"neoclide/coc.nvim",
 		branch = "release",
+    config = function()
+      require("config.coc")
+    end,
 	},
 	-- "williamboman/mason.nvim",
 	-- "williamboman/mason-lspconfig.nvim",
